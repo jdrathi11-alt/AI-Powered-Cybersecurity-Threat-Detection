@@ -2,6 +2,8 @@
 
 > Industry-aligned student project — simulated intrusion, fraud, and anomaly detection using public network traffic data.
 
+![Simulation Proof](outputs/anomaly_plot.png)
+
 ## Problem
 Cyber threats grow faster than manual rules. Traditional IDS miss new patterns; AI adapts by learning normal behavior and flagging deviations.
 
@@ -71,8 +73,6 @@ Built as proof-of-work for placements and internships.
 - `outputs/anomaly_plot.png` — anomaly score distribution
 - `outputs/alerts.csv` — predicted labels with scores
 
-## Author
-Student Developer — proof-of-work for placements / internships.
 
 ## Future Improvements
 - Real-world dataset: UNSW-NB15 / CICIDS2017 (larger scale)
@@ -81,7 +81,11 @@ Student Developer — proof-of-work for placements / internships.
 - Real-time dashboard (Streamlit / Dash) for SOC analysts
 - Deep learning variant (autoencoders) for complex pattern detection
 
-## Badges
+# Author
+**Jayesh Rathi** — 3rd Year IT Student, Government College of Engineering, Amravati  
+[LinkedIn](https://www.linkedin.com/in/jayesh-rathi-5ab8973b6) | [Email](mailto:jayeshrathinew@gmail.com)
+
+# Badges
 ![Python](https://img.shields.io/badge/python-3.10+-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-student_project-orange)
