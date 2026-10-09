@@ -3,6 +3,8 @@
 > Industry-aligned student project — simulated intrusion, fraud, and anomaly detection using public network traffic data.
 
 ![Simulation Proof](outputs/anomaly_plot.png)
+![Simulation Proof](outputs/confusion_matrix.png)
+![Simulation Proof](outputs/alerts.csv)
 
 ## Problem
 Cyber threats grow faster than manual rules. Traditional IDS miss new patterns; AI adapts by learning normal behavior and flagging deviations.
