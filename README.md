@@ -1,73 +1,87 @@
-# AI-Powered Cybersecurity Threat Detection System
+# AI-Powered Cybersecurity Threat Detection
 
-> Student project — industry-aligned, GitHub-ready, uses public datasets + virtual simulation.
+> Industry-aligned student project — simulated intrusion, fraud, and anomaly detection using public network traffic data.
 
-## Overview
-Detects network intrusion, DoS, brute-force, and anomalies using Isolation Forest + Random Forest on simulated traffic data.
+## Problem
+Cyber threats grow faster than manual rules. Traditional IDS miss new patterns; AI adapts by learning normal behavior and flagging deviations.
 
-## Problem Statement
-Cyber attacks cost companies billions. Traditional rule-based IDS miss new patterns. AI learns normal behavior and flags deviations in real time.
-
-## Industry Relevance
-- Banks: fraud + account takeover detection
-- IT / SaaS: intrusion prevention (IDS/IPS)
-- Product companies: security dashboards (SIEM)
+## Industry Use
+- Banks — fraud / account takeover detection
+- IT / SaaS — intrusion prevention (IDS)
+- Product / Security — SIEM dashboards
 
 ## Tech Stack
-Python 3.10 | Pandas | NumPy | Scikit-learn | Matplotlib | Seaborn
+Python 3.10 · Pandas · NumPy · Scikit-learn · Matplotlib · Seaborn
 
 ## Architecture
-```
-Data (CSV) → Preprocess → Features → Isolation Forest / RF → Prediction → Alert CSV + Charts
-```
+`CSV (network logs)` → `Preprocess` → `Isolation Forest + Random Forest` → `Alert CSV + Confusion Matrix + Anomaly Chart`
 
-## Dataset
-KDD Cup 99 / UNSW-NB15 (public). Columns: duration, protocol, service, src_bytes, dst_bytes, flag, label (normal / DoS / probe / R2L).
-
-## Installation
+## Quick Run
 ```bash
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
-```
-
-## How to Run
-```bash
 python main.py
 ```
-Produces: `outputs/alerts.csv`, `outputs/anomaly_plot.png`, `outputs/confusion_matrix.png`
-
-## Results (Expected)
-- Accuracy: ~92-96% (Random Forest on balanced sample)
-- Anomaly detection: flags outliers with scores > threshold
-- Confusion matrix: Normal vs Attack classification
-
-## Screenshots / Proof
-See `images/` folder for dataset preview, confusion matrix, and alert charts.
-
-## Learning Outcomes
-- Data preprocessing for security data
-- Feature engineering for network flows
-- Unsupervised (Isolation Forest) + supervised (Random Forest)
-- Evaluation: accuracy, precision, recall, F1
-- Visualization of threat patterns
-- Professional GitHub repo structure
+Outputs: `outputs/alerts.csv`, `outputs/confusion_matrix.png`, `outputs/anomaly_plot.png`
 
 ## Project Structure
 ```
-AI-Cybersecurity-Threat-Detection/
-├── data/
-├── notebooks/
-├── src/
-├── models/
-├── outputs/
-├── images/
-├── docs/
-├── README.md
+├── data/              # dataset
+├── src/               # modules (future)
+├── outputs/           # predictions + charts
+├── images/            # proof screenshots
+├── docs/              # full guide
+├── main.py            # pipeline
+├── README.md          # this file
 ├── requirements.txt
-├── .gitignore
-└── main.py
+└── .gitignore
 ```
 
+## Proof / Status
+- [x] Dataset loaded (simulated traffic)
+- [x] Preprocessing pipeline
+- [x] Isolation Forest (unsupervised)
+- [x] Random Forest (supervised)
+- [x] Metrics: Accuracy, Precision, Recall, F1
+- [x] Confusion matrix + anomaly plot
+- [x] GitHub-ready docs + README
+- [ ] AWS / Lambda deployment (future)
+- [ ] Continuous threat updates (future)
+
+Built as proof-of-work for placements and internships.
+
 ---
-Built by a student for placement / internship proof of work.
+
+## Architecture Diagram
+
+```
+[Network Traffic CSV] → [Preprocess: clean/encode/scale]
+       ↓
+[Isolation Forest] → [Anomaly Scores / Flags]
+       ↓
+[Random Forest]    → [Predicted Label (normal / DoS / probe)]
+       ↓
+[Alerts CSV] + [Confusion Matrix PNG] + [Anomaly Plot PNG]
+```
+
+## Screenshots / Proof
+- `images/dataset_preview.png` — dataset sample
+- `outputs/confusion_matrix.png` — model classification result
+- `outputs/anomaly_plot.png` — anomaly score distribution
+- `outputs/alerts.csv` — predicted labels with scores
+
+## Author
+Student Developer — proof-of-work for placements / internships.
+
+## Future Improvements
+- Real-world dataset: UNSW-NB15 / CICIDS2017 (larger scale)
+- AWS Lambda / Cloud Function deployment for real-time inference
+- Continuous update pipeline: automated retraining on new threat signatures
+- Real-time dashboard (Streamlit / Dash) for SOC analysts
+- Deep learning variant (autoencoders) for complex pattern detection
+
+## Badges
+![Python](https://img.shields.io/badge/python-3.10+-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-student_project-orange)
